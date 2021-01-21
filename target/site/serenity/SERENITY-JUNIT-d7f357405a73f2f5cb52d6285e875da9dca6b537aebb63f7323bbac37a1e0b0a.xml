@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="TDTProject.features.search.LoginStory" skipped="0" tests="4" time="24.26" timestamp="2019-05-21T17:45:47.272994300+03:00[Europe/Bucharest]"><testcase classname="TDTProject.features.search.LoginStory" name="Successful login"/><testcase classname="TDTProject.features.search.LoginStory" name="Wrong password login"><error message="The following error occurred: Expected condition failed: waiting for LoginPage.incorrect to be displayed (tried for 5 second(s) with 100 MILLISECONDS interval)&#10;Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'&#10;System info: host: 'DESKTOP-3F75ABS', ip: '192.168.100.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.NoSuchElementException">The following error occurred: Expected condition failed: waiting for LoginPage.incorrect to be displayed (tried for 5 second(s) with 100 MILLISECONDS interval)
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
+System info: host: 'DESKTOP-3F75ABS', ip: '192.168.100.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
+Driver info: driver.version: unknown</error><system-err>The following error occurred: Expected condition failed: waiting for LoginPage.incorrect to be displayed (tried for 5 second(s) with 100 MILLISECONDS interval)
+Build info: version: '3.7.1', revision: '8a0099a', time: '2017-11-06T21:01:39.354Z'
+System info: host: 'DESKTOP-3F75ABS', ip: '192.168.100.2', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '12'
+Driver info: driver.version: unknown&#13;
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+TDTProject.pages.LoginPage.getIncorrect(LoginPage.java:43)&#13;
+TDTProject.steps.serenity.LoginSteps.should_check_user_and_password(LoginSteps.java:53)&#13;
+TDTProject.features.search.LoginStory.wrong_password_login(LoginStory.java:45)&#13;
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+</system-err></testcase><testcase classname="TDTProject.features.search.LoginStory" name="Missing password login"/><testcase classname="TDTProject.features.search.LoginStory" name="Empty login"/></testsuite>

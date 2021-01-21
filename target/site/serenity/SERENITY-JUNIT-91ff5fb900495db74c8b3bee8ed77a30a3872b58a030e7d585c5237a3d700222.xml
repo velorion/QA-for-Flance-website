@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="TDTProject.features.search.SearchByKeywordStory" skipped="0" tests="1" time="18.32" timestamp="2019-05-15T17:26:31.688143500+03:00[Asia/Beirut]"><testcase classname="TDTProject.features.search.SearchByKeywordStory" name="Click login"><failure message="&#10;Expected: &quot;cosmin.tanase4@gmail.com&quot;&#10;     but: was &quot;cosmin.tanase5@gmail.com&quot;" type="java.lang.AssertionError">
+Expected: "cosmin.tanase4@gmail.com"
+     but: was "cosmin.tanase5@gmail.com"</failure><system-err>
+Expected: "cosmin.tanase4@gmail.com"
+     but: was "cosmin.tanase5@gmail.com"&#13;
+TDTProject.steps.serenity.LoginSteps.should_see_overview(LoginSteps.java:40)&#13;
+TDTProject.features.search.SearchByKeywordStory.click_login(SearchByKeywordStory.java:52)&#13;
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+</system-err></testcase></testsuite>

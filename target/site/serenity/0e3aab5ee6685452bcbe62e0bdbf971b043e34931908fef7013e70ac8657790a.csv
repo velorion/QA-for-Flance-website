@@ -1,0 +1,3 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Search by keyword story","Searching by keyword banana should display the corresponding article","SUCCESS","2019-05-15T16:19:09.5313709+03:00[Asia/Beirut]","0.0","15.53"
+"Search by keyword story","Searching by keyword apple should display the corresponding article","SUCCESS","2019-05-15T16:19:25.1200447+03:00[Asia/Beirut]","0.0","3.52"

@@ -1,0 +1,131 @@
+<html id="app" dir="ltr" ng-csp="" ng-strict-di="" class="ng-scope" lang="en"><head>
+  <meta charset="utf-8">
+  <title ng-bind="('loginTitle' | localize) + ' - Spotify'" class="ng-binding">Login - Spotify</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <base href="/">
+  <link rel="icon" href="https://accounts.scdn.co/images/favicon.ace4d8543bbb017893402a1e9d1ac1fa.ico">
+  <link href="https://accounts.scdn.co/css/index.ba230088dd8f83db3487.css" media="screen" rel="stylesheet">
+
+  <script type="text/javascript" async="" src="https://www.gstatic.com/recaptcha/api2/v1555968629716/recaptcha__en.js"></script><script async="" src="https://www.google-analytics.com/analytics.js"></script><script defer="" src="https://accounts.scdn.co/js/index.ba230088dd8f83db3487.js" sp-bootstrap=""></script>
+  <meta ng-non-bindable="" sp-bootstrap-data="{&quot;phoneFeatureEnabled&quot;:false,&quot;user&quot;:false,&quot;BON&quot;:[&quot;0&quot;,&quot;0&quot;,-304664616]}">
+<script charset="utf-8" src="https://accounts.scdn.co/js/0.32c971dc81e107d3b33c.js"></script><script charset="utf-8" src="https://accounts.scdn.co/js/1.2a56980e3fcbb141ce1a.js"></script><script charset="utf-8" src="https://accounts.scdn.co/js/2.42237ec0871ed80326b1.js"></script></head>
+<body ng-controller="LoginController" class="ng-scope">
+  <!-- ngInclude: template --><div ng-include="template" class="ng-scope"><div sp-header="" class="ng-scope"><div class="head ">
+  <a class="spotify-logo" tabindex="-1" title="Spotify" ng-href="/en" href="/en"></a>
+</div>
+</div>
+
+<div class="container-fluid login ng-scope">
+  <recaptcha><script src="https://www.google.com/recaptcha/api.js?render=6Lfdz4QUAAAAABK1wbAdKww1AEvuJuCTVHoWvX8S" async="true"></script></recaptcha>
+  <div class="content">
+    <!-- ngIf: showContinueLabel --><div class="row ng-scope" ng-if="showContinueLabel">
+          <div class="col-xs-12 text-center">
+              <span id="login-to-continue" class="h5 ng-binding">To continue, log in to Spotify.</span>
+          </div>
+    </div><!-- end ngIf: showContinueLabel -->
+    <div class="row">
+      <div class="col-xs-12">
+        <a ng-href="https://www.facebook.com/v2.3/dialog/oauth?client_id=174829003346&amp;state=AQBvOcAZ0ebAaS5v3ftgKPR3n7w49E_ZdHywsb9T8tuni_hfa3m0xYjmaQIBuNYbTlZaxQ5tqCgs3-y4&amp;redirect_uri=https%3A%2F%2Faccounts.spotify.com%2Fapi%2Ffacebook%2Foauth%2Faccess_token" class="btn btn-block btn-facebook ng-binding" target="_parent" role="button" analytics-on="click" analytics-category="Login View" analytics-event="Facebook Button" analytics-label="{{" clientid="" }}="" href="https://www.facebook.com/v2.3/dialog/oauth?client_id=174829003346&amp;state=AQBvOcAZ0ebAaS5v3ftgKPR3n7w49E_ZdHywsb9T8tuni_hfa3m0xYjmaQIBuNYbTlZaxQ5tqCgs3-y4&amp;redirect_uri=https%3A%2F%2Faccounts.spotify.com%2Fapi%2Ffacebook%2Foauth%2Faccess_token">Log in with Facebook</a>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="divider">
+          <strong class="divider-title ng-binding">or</strong>
+        </div>
+      </div>
+    </div>
+
+    <form name="$parent.accounts" method="post" novalidate="" class="ng-valid-sp-disallow-chars ng-invalid ng-invalid-required ng-dirty ng-valid-parse">
+      <!-- ngIf: status && status !== 200 -->
+
+      <div class="row" ng-class="{'has-error': (accounts.username.$dirty &amp;&amp; accounts.username.$invalid)}">
+        <div class="col-xs-12">
+          <label for="login-username" class="control-label sr-only ng-binding">
+            Email address or username
+          </label>
+          <input ng-model="form.username" type="text" class="form-control input-with-feedback ng-valid-sp-disallow-chars ng-dirty ng-valid-parse ng-touched ng-not-empty ng-valid ng-valid-required" name="username" id="login-username" placeholder="Email address or username" required="" sp-disallow-chars=":%&amp;'`´&quot;" sp-disallow-chars-model="usernameDisallowedChars" autocapitalize="off" autocomplete="off" autocorrect="off" autofocus="autofocus" ng-trim="false" style="">
+          <!-- ngIf: accounts.username.$dirty && accounts.username.$invalid -->
+        </div>
+      </div>
+
+      <div class="row has-error" ng-class="{'has-error': (accounts.password.$dirty &amp;&amp; accounts.password.$invalid)}">
+        <div class="col-xs-12">
+          <label for="login-password" class="control-label sr-only ng-binding">
+            Password
+          </label>
+          <input ng-model="form.password" type="password" class="form-control input-with-feedback ng-untouched ng-empty ng-invalid ng-invalid-required ng-dirty" name="password" id="login-password" placeholder="Password" required="" autocomplete="off" ng-trim="false">
+          <!-- ngIf: accounts.password.$dirty && accounts.password.$invalid --><div ng-if="accounts.password.$dirty &amp;&amp; accounts.password.$invalid" class="ng-scope">
+            <!-- ngIf: accounts.password.$error.required --><label ng-if="accounts.password.$error.required" class="control-label-validation ng-binding ng-scope" for="login-password">Please enter your password.</label><!-- end ngIf: accounts.password.$error.required -->
+          </div><!-- end ngIf: accounts.password.$dirty && accounts.password.$invalid -->
+        </div>
+      </div>
+
+      <div class="row row-submit">
+        <div class="col-xs-12 col-sm-6">
+          <div class="checkbox">
+            <label class="ng-binding">
+              <input ng-model="form.remember" type="checkbox" name="remember" id="login-remember" class="ng-pristine ng-untouched ng-valid ng-not-empty">
+              Remember me
+              <span class="control-indicator"></span>
+            </label>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <button class="btn btn-block btn-green ng-binding" id="login-button" ng-click="onLoginClick($event)" style="">Log In</button>
+        </div>
+      </div>
+    </form>
+
+    <div class="row">
+      <div class="col-xs-12 text-center">
+        <p>
+          <a id="reset-password-link" ng-href="https://www.spotify.com/password-reset/" analytics-on="click" analytics-category="Login View" analytics-event="Forgot Button" analytics-label="" class="ng-binding" href="https://www.spotify.com/password-reset/">Forgot your password?</a>
+        </p>
+      </div>
+    </div>
+
+    <div id="sign-up-section">
+      <div class="row">
+        <div class="col-xs-12">
+          <div ng-controller="SignUpController" class="ng-scope">
+            <!-- ngInclude: 'signup.ngt' --><div ng-include="'signup.ngt'" class="ng-scope"><!-- ngIf: showSignup --><div ng-if="showSignup" class="ng-scope">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="divider">
+                <!-- ngIf: orLabelVisible -->
+            </div>
+        </div>
+    </div>
+    <div class="row text-center mt-0">
+        <div class="h4 ng-binding">Don't have an account?</div>
+    </div>
+    <div>
+        <div class="row">
+            <div class="col-xs-12">
+                <a id="sign-up-link" ng-href="https://www.spotify.com/signup/?forward_url=https%3A%2F%2Fwww.spotify.com%2Fro%2Faccount%2Foverview%2F" class="btn btn-block btn-default ng-binding" role="button" href="https://www.spotify.com/signup/?forward_url=https%3A%2F%2Fwww.spotify.com%2Fro%2Faccount%2Foverview%2F">Sign up for Spotify</a>
+            </div>
+        </div>
+    </div>
+</div><!-- end ngIf: showSignup -->
+
+<!-- ngIf: showAppStoreBanner --></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="divider"></div>
+        <p class="text-muted disclaimer text-center ng-binding" ng-bind-html="'loginTermsOfService' | localize:termsAndConditionsUrl:privacyPolicyUrl">If you click "Log in with Facebook" and are not a Spotify user, you will be registered and you agree to Spotify's <a href="https://www.spotify.com/legal/end-user-agreement/plain/" target="_blank">Terms &amp; Conditions</a> and <a href="https://www.spotify.com/legal/privacy-policy/plain/" target="_blank">Privacy Policy</a>.</p>
+      </div>
+    </div>
+  </div><!-- .content -->
+</div><!-- .container -->
+</div>
+
+
+<div><div class="grecaptcha-badge" data-style="bottomright" style="width: 256px; height: 60px; display: block; transition: right 0.3s ease 0s; position: fixed; bottom: 14px; right: -186px; box-shadow: gray 0px 0px 5px;"><div class="grecaptcha-logo"><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Lfdz4QUAAAAABK1wbAdKww1AEvuJuCTVHoWvX8S&amp;co=aHR0cHM6Ly9hY2NvdW50cy5zcG90aWZ5LmNvbTo0NDM.&amp;hl=en&amp;v=v1555968629716&amp;size=invisible&amp;cb=d9nuurf0j4ft" role="presentation" name="a-hgjr8q133e62" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation" width="256" height="60" frameborder="0"></iframe></div><div class="grecaptcha-error"></div><textarea id="g-recaptcha-response-100000" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div></body></html>

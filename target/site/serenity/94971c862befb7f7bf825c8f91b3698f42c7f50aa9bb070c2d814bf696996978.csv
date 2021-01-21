@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Login story","Successful login","SUCCESS","2019-05-16T13:45:04.8708372+03:00[Asia/Beirut]","0.0","23.09"
+"Login story","Wrong password login","SUCCESS","2019-05-16T13:45:28.0293876+03:00[Asia/Beirut]","0.0","4.37"
+"Login story","Missing password login","SUCCESS","2019-05-16T13:45:32.4291099+03:00[Asia/Beirut]","0.0","3.58"
+"Login story","Empty login","SUCCESS","2019-05-16T13:45:36.0288801+03:00[Asia/Beirut]","0.0","3.92"

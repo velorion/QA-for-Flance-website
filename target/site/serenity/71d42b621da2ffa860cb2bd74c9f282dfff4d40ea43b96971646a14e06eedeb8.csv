@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Search story","Search item","SUCCESS","2019-05-21T21:01:50.6667387+03:00[Europe/Bucharest]","0.0","28.19"
+"Search story","Invalid search","SUCCESS","2019-05-21T21:02:19.0059389+03:00[Europe/Bucharest]","0.0","3.16"
+"Search story","Search 1","SUCCESS","2019-05-21T21:23:03.522864+03:00[Europe/Bucharest]","0.0","9.63"
+"Search story","Search 2","SUCCESS","2019-05-21T21:34:59.1699503+03:00[Europe/Bucharest]","0.0","9.5"
